@@ -1,0 +1,11 @@
+[Unit]
+Description=Go GnuDIP updater service
+After=network.target
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/local/bin/go-gnudip
+EnvironmentFile=/etc/go-gnudip
+
+[Install]
+WantedBy=multi-user.target
