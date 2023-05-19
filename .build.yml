@@ -7,4 +7,4 @@ tasks:
   - mirror-to-github: |
       cd ~/go-gnudip
       export GIT_SSH_COMMAND='ssh -o "StrictHostKeyChecking no"'
-      git push git@github.com:djelic/go-gnudip.git "+refs/remotes/origin/*:refs/heads/*" "+refs/tags/*:refs/tags/*"
+      git push --mirror git@github.com:djelic/go-gnudip.git
