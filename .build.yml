@@ -1,0 +1,10 @@
+image: alpine/edge
+sources:
+  - https://git.sr.ht/~djelic/go-gnudip
+secrets:
+  - 53eb32f7-6696-4852-87ff-4bc521387638
+tasks:
+  - mirror-to-github: |
+      cd ~/go-gnudip
+      export GIT_SSH_COMMAND='ssh -o "StrictHostKeyChecking no"'
+      git push git@github.com:djelic/go-gnudip.git "+refs/remotes/origin/*:refs/heads/*" "+refs/tags/*:refs/tags/*"
